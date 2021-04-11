@@ -1,43 +1,24 @@
-import React, { useEffect } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { StaticImage } from "gatsby-plugin-image"
+import React, { useEffect } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { StaticImage } from 'gatsby-plugin-image'
 
-import "./style.scss"
+import './style.scss'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Hero = () => {
-  useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".heroContainer",
-          pin: true,
-          start: "60% 60%",
-          end: "80% 40%",
-          scrub: true,
-        },
-      })
-      .to("#masoud", { y: -150 }, 0)
-      .to(".heroJobRow", { y: -150 }, 0)
-  }, [])
   return (
     <div className="heroContainer">
-      <h1>Hi</h1>
       <div className="heroInner">
-        <h1 id="masoud">I'm, Masoud</h1>
-        <div className="heroJobRow">
-          <h1>a </h1>
-          <StaticImage
-            src="../../images/react-logo.png"
-            id="react-logo"
-            alt="React/React Native Logo"
-            width={150}
-            height={150}
-          />
-          <h1>Developer</h1>
-        </div>
+        <p id="hi">Hi, my name is</p>
+        <h1 id="masoud">Masoud Moharrami</h1>
+        <h2>I build things for the mobile & web.</h2>
+        <p id="desc">
+          I'm Software Engineer who is exceptional in building digital
+          experience.
+        </p>
+        <a href="mailto:m.masoud.1991@gmail.com">Get In Touch</a>
       </div>
     </div>
   )

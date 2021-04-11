@@ -10,11 +10,17 @@ import PropTypes from 'prop-types'
 
 import './layout.scss'
 import Footer from './footer'
+import Navbar from './navbar'
+import Links from './links'
+import Email from './email'
 
 const Layout = ({ children }) => {
   return (
     <>
+      <Navbar />
       <main className="main">{children}</main>
+      <Links />
+      <Email />
       <Footer />
     </>
   )

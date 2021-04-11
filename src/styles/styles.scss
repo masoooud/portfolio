@@ -1,5 +1,9 @@
 @import 'fonts';
 @import 'colors';
+:root {
+    --space: 10px;
+}
+
 body {
-    background-color: $white;
+    background-color: $dark-blue;
 }
