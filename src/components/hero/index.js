@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { StaticImage } from 'gatsby-plugin-image'
 
 import './style.scss'
 
@@ -13,7 +12,7 @@ const Hero = () => {
       <div className="heroInner">
         <p id="hi">Hi, my name is</p>
         <h1 id="masoud">Masoud Moharrami</h1>
-        <h2>I build things for the mobile & web.</h2>
+        <h2 className="subtitle">I build things for the mobile & web.</h2>
         <p id="desc">
           I'm Software Engineer who is exceptional in building digital
           experience.

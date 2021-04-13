@@ -17,8 +17,8 @@ const Links = () => {
   ]
   return (
     <div className="linkbar">
-      {links.map(item => (
-        <a href={item.url}>
+      {links.map((item, index) => (
+        <a href={item.url} key={`link-${index}`}>
           <CustomIcon
             name={item.icon}
             fill={colors.lGreen}

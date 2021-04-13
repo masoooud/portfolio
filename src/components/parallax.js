@@ -1,7 +1,7 @@
-import * as React from "react"
-import Layout from "components/layout"
-import SEO from "../components/seo"
-import "../styles/styles.scss"
+import * as React from 'react'
+import Layout from 'components/layout'
+import SEO from '../components/seo'
+import '../styles/styles.scss'
 
 const ParallaxPage = () => (
   <Layout>
@@ -9,21 +9,21 @@ const ParallaxPage = () => (
     {/* <h1 className="heroText">HI, I'M</h1>
     <h1 className="heroText">MASOUD MOHARRAMI</h1> */}
 
-    <div class="parallax">
-      <div class="text">
+    <div className="parallax">
+      <div className="text">
         This div is just here to enable scrolling. Tip: Try to remove the
         background-attachment property to remove the scrolling effect.
       </div>
     </div>
 
-    <div class="parallax2"></div>
+    <div className="parallax2"></div>
 
-    <div class="parallax3"></div>
+    <div className="parallax3"></div>
     <style jsx>
       {`
         .parallax {
           /* The image used */
-          background-image: url("../../images/img_parallax.jpg");
+          background-image: url('../../images/img_parallax.jpg');
           /* Full height */
           height: 50vh;
           /* Create the parallax scrolling effect */
@@ -44,7 +44,7 @@ const ParallaxPage = () => (
 
         .parallax2 {
           /* The image used */
-          background-image: url("../../images/img_parallax2.jpg");
+          background-image: url('../../images/img_parallax2.jpg');
           /* Full height */
           height: 50vh;
           /* Create the parallax scrolling effect */
@@ -56,7 +56,7 @@ const ParallaxPage = () => (
 
         .parallax3 {
           /* The image used */
-          background-image: url("../../images/img_parallax3.jpg");
+          background-image: url('../../images/img_parallax3.jpg');
           /* Full height */
           height: 50vh;
           /* Create the parallax scrolling effect */

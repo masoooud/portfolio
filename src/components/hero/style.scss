@@ -1,61 +1,42 @@
 @import "styles/fonts";
 @import "styles/colors";
-h1 {
-    font-family: $poppins;
-    font-weight: 900;
-    font-size: 3em;
-    line-height: 1.5em;
-    color: $white;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-family: $poppins;
-    font-weight: 900;
-    font-size: 2em;
-    color: $white;
-    opacity: 50%;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-#hi {
-    font-family: $space;
-    font-size: 1em;
-    color: $light-green;
-    letter-spacing: 1px;
-}
-
-#desc {
-    font-family: $poppins;
-    font-size: 1em;
-    font-weight: 700;
-    color: $white;
-    letter-spacing: 1px;
-    opacity: 50%;
-}
-
 .heroContainer {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: auto;
     background: $dark-blue;
+    margin: auto;
     .heroInner {
         overflow: hidden;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding: calc(var(--space)*4);
+        h1 {
+            font-family: $poppins;
+            font-weight: 900;
+            font-size: 3em;
+            line-height: 1.5em;
+            color: $white;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-family: $poppins;
+            font-weight: 900;
+            font-size: 2em;
+            color: $dark-gray;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
         a {
             border: 1px solid $light-green;
             border-radius: 4px;
             background: transparent;
             color: $light-green;
-            font-family: $space;
+            font-family: $smono;
             margin-top: calc(var(--space)*5);
             padding: var(--space);
             text-decoration: none;
@@ -66,21 +47,32 @@ h2 {
                 color: $dark-blue;
             }
         }
+        #hi {
+            font-family: $smono;
+            font-size: 1em;
+            color: $light-green;
+            letter-spacing: 1px;
+            // margin-top: 40px;
+        }
+        #desc {
+            font-family: $poppins;
+            font-size: 1em;
+            font-weight: 700;
+            color: $white;
+            letter-spacing: 1px;
+            color: $dark-gray;
+        }
     }
 }
 
 @media (max-width: 991) {
-    h1 {
-        font-family: $anton;
-        font-size: 100px;
-        line-height: 120px;
-    }
     .heroContainer {
         .heroInner {
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            h1 {
+                font-family: $anton;
+                font-size: 100px;
+                line-height: 120px;
+            }
             #name {
                 display: flex;
                 flex-direction: row;
@@ -94,50 +86,23 @@ h2 {
     }
 }
 
-@-webkit-keyframes rotating
-/* Safari and Chrome */
-
-{
-    from {
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes rotating {
-    from {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-#react-logo {
-    -webkit-animation: rotating 2s linear infinite;
-    -moz-animation: rotating 2s linear infinite;
-    -ms-animation: rotating 2s linear infinite;
-    -o-animation: rotating 2s linear infinite;
-    animation: rotating 2s linear infinite;
-}
-
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
+@media (max-width: 480) {
+    .heroContainer {
+        .heroInner {
+            h1 {
+                font-family: $anton;
+                font-size: 100px;
+                line-height: 120px;
+            }
+            #name {
+                display: flex;
+                flex-direction: row;
+            }
+            .heroJobRow {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
     }
 }
